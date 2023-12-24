@@ -12,6 +12,7 @@ class FloorMap():
 		config = json.load(f)
 
 		self.data_folder = os.path.split(os.path.abspath(jsonPath))[0] + "/"
+		print("datafolder: ", self.data_folder)
 		self.roomSeg = cv2.imread(self.data_folder + config['roomSeg'], 0)
 		self.map = cv2.imread(self.data_folder + config['map']['image'])
 		self.classes = config['semantic']['classes']

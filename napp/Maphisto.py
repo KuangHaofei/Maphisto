@@ -82,7 +82,9 @@ class EditableMap(QLabel):
 class Example(QWidget):
     def __init__(self, parent):
         super(Example, self).__init__()
-        self.map_name = "data/JMap/JMap.png"
+        # self.map_name = "data/JMap/JMap.png"
+        self.map_name = "/home/ipb-hk/harmony_nmcl/ncore/data/ABB_lab/0/GMap.pgm"
+        # self.map_name = "/home/ipb-hk/harmony_nmcl/ncore/data/floor/Bonn/0/FMap.png"
         self.data_folder = os.path.split(os.path.abspath(self.map_name))[0] + "/"
         self.floorMap = FloorMap(self.data_folder + "floor.config")
         self.mode = 5
